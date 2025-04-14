@@ -1,0 +1,39 @@
+/* Custom Styles */
+body {
+  font-family: Arial, sans-serif;
+}
+
+#user-1 {
+  object-fit: cover;
+}
+
+#user-2 {
+  object-fit: cover;
+}
+
+.control-btn {
+  background-color: #1d4ed8;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 16px;
+}
+
+.control-btn:hover {
+  background-color: #2563eb;
+}
+
+.btn {
+  background-color: #1d4ed8;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 16px;
+}
+
+.btn:hover {
+  background-color: #2563eb;
+}

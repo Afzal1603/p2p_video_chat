@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Calling App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.3/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-gray-900 text-white font-sans">
+    <!-- Room Join Form -->
+    <div
+      id="join-room-container"
+      class="flex justify-center items-center h-screen"
+    >
+      <div class="text-center bg-gray-800 p-6 rounded-lg shadow-lg">
+        <h1 class="text-2xl mb-4">Join Video Call</h1>
+        <input
+          type="text"
+          id="room-id"
+          class="p-3 border border-gray-600 rounded-md mb-4"
+          placeholder="Enter Room ID"
+        />
+        <button id="join-room" class="btn" onclick="joinRoom()">
+          Join Room
+        </button>
+      </div>
+    </div>
+
+    <!-- Video Container -->
+    <div
+      id="video-container"
+      class="hidden relative h-screen flex justify-center items-center"
+    >
+      <video id="user-2" class="w-3/4 h-3/4" autoplay playsinline></video>
+      <video
+        id="user-1"
+        class="w-1/4 h-1/4 absolute top-4 right-4 border-2"
+        autoplay
+        playsinline
+      ></video>
+    </div>
+
+    <!-- Controls -->
+    <div
+      class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex space-x-4"
+    >
+      <button id="mute-video" class="control-btn">Mute Video</button>
+      <button id="mute-audio" class="control-btn">Mute Audio</button>
+      <button id="end-call" class="control-btn">End Call</button>
+    </div>
+
+    <script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
